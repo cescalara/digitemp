@@ -108,7 +108,7 @@ extern SMALLINT USpeed[MAX_PORTNUM];
 //
 SMALLINT owFirst(int portnum, SMALLINT do_reset, SMALLINT alarm_only)
 {
-  printf("looking for first device...")
+  printf("looking for first device...");
   // reset the search state
    LastDiscrepancy[portnum] = 0;
    LastDevice[portnum] = FALSE;
