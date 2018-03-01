@@ -2257,7 +2257,8 @@ int Init1WireLan( struct _roms *sensor_list )
   /*
      Did the search find any sensors? Even if there was an error it may
      have found some valid sensors
-  */ 
+  */
+  printf("checking for found sensors...");
   if( found_sensors )
   {
     /* Was anything found on the main branch? */
@@ -2621,6 +2622,7 @@ int main( int argc, char *argv[] )
   /* This should store the serial numbers to the .digitemprc file      */
   if( opts & OPT_INIT )
   {
+    fprintf("trying to initialise...");
     if( Init1WireLan( &sensor_list ) != 0 )
     {
       if( sensor_list.roms != NULL )
