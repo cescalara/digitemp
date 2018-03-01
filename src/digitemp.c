@@ -2077,6 +2077,7 @@ int Init1WireLan( struct _roms *sensor_list )
   }
   /* Find any DS2409 Couplers and turn them all off */
   result = owFirst( 0, TRUE, FALSE );
+  printf("result %")
   while(result)
   {
     owSerialNum( 0, TempSN, TRUE );

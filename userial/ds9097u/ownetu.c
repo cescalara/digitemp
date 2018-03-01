@@ -108,7 +108,8 @@ extern SMALLINT USpeed[MAX_PORTNUM];
 //
 SMALLINT owFirst(int portnum, SMALLINT do_reset, SMALLINT alarm_only)
 {
-   // reset the search state
+  printf("looking for first device...")
+  // reset the search state
    LastDiscrepancy[portnum] = 0;
    LastDevice[portnum] = FALSE;
    LastFamilyDiscrepancy[portnum] = 0;
@@ -146,7 +147,7 @@ SMALLINT owNext(int portnum, SMALLINT do_reset, SMALLINT alarm_only)
    uchar readbuffer[20],sendpacket[40];
    uchar i,sendlen=0;
    uchar lastcrc8;
-
+   printf("now the next one..")
    // if the last call was the last one
    if (LastDevice[portnum])
    {
