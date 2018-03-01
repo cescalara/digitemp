@@ -133,7 +133,7 @@ SMALLINT OpenCOM(int portnum, char *port_zstr)
    struct termios t;               // see man termios - declared as above
    int rc;
 
-   fd[portnum] = open(port_zstr, O_RDWR|O_NONBLOCK);
+   fd[portnum] = open(port_zstr, O_RDWR|O_NOCTTY|O_NONBLOCK);
    if (fd[portnum]<0)
    {
       OWERROR(OWERROR_GET_SYSTEM_RESOURCE_FAILED);
