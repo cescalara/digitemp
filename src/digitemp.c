@@ -2622,7 +2622,7 @@ int main( int argc, char *argv[] )
   /* This should store the serial numbers to the .digitemprc file      */
   if( opts & OPT_INIT )
   {
-    fprintf("trying to initialise...");
+    printf("trying to initialise...");
     if( Init1WireLan( &sensor_list ) != 0 )
     {
       if( sensor_list.roms != NULL )
